@@ -16,7 +16,6 @@ Lesson 5: Reading and Writing Files in Python.
   - Appending data to an existing file
 
 ## Resources
-## Resources
 - Past lesson materials
   - [Functions and modules](https://github.com/Python-for-geo-people/Functions-and-modules)
   - [Control flow](https://github.com/Python-for-geo-people/Control-flow)
