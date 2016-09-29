@@ -2,7 +2,7 @@
 Lesson 5: Reading and Writing Files in Python. 
 
 ## Lesson overview
-1. Summary of early course feedback
+1. [Summary of early course feedback](Lesson/midterm-feedback.md)
 2. [Reading data from a file]()
   - Data reading methods in Python
   - Assigning read data to variables
