@@ -1,4 +1,4 @@
-# Reading and Writing Files
+# Lesson 5: Reading and Writing Files
 Lesson 5: Reading and Writing Files in Python. 
 
 ## Lesson overview
