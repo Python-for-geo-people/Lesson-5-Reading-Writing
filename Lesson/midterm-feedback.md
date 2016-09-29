@@ -39,17 +39,17 @@
  - Explaining correct answers on Monday / Giving right answers
  - Make it slightly more challenging
  - More instructions for the exercises, more examples, slightly easier exercises
- - Chat for asking questions from others / teachers
+ - *Chat for asking questions from others / teachers*
  - More stuff on Geographical issues
  - Optional more demanding exercise 
 
 ### 7. Do you have any other general comments about the course? Comments on things like the computing environment or use of GitHub would be quite helpful!
 
  - GitHub was first confusing but now I'm getting it!
- - Why do we need to use computer instances / Pouta environment instead of doing stuff on local computers?
- - Why don't we use Moodle instead of GitHub?
- - Why isn't this course done as a MOOC?
+ - *Why do we need to use computer instances / Pouta environment instead of doing stuff on local computers?*
+ - *Why don't we use Moodle instead of GitHub?*
+ - *Why isn't this course done as a MOOC?*
  - Give answers to the exercises
- - More hints about programming practices (run and test your code frequently, don't use spaces in variable names etc.) 
- - At the end of lesson material page, give link to the next page, previous page, main page
+ - *More hints about programming practices (run and test your code frequently, don't use spaces in variable names etc.)*
+ - *At the end of lesson material page, give link to the next page, previous page, main page*
  - Practicals should be in the same classroom as lectures where there are two screens
