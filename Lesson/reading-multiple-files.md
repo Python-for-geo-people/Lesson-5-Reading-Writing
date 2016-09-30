@@ -19,7 +19,7 @@ This lesson is partially based on the [Software Carpentry group's](http://softwa
 During this demo the data is about inflammation in patients who have been given a new treatment for arthritis that are stored in multiple data files that 
 are stored in comma-separated values (CSV).
  
-1. Download the data (a zip-file) into the HOME folder of your computer instance from **[this link](../Data/python-novice-inflammation-data.zip)**
+1. **[Download the data](../Data/python-novice-inflammation-data.zip)** (a zip-file) into the HOME folder of your computer instance
 2. Extract the data using `unzip` command in Terminal window:
 
   ```bash
