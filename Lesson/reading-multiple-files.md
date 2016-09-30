@@ -26,9 +26,9 @@ are stored in comma-separated values (CSV).
   $ cd $HOME
   $ unzip python-novice-inflammation-data.zip .
   ```
-The `.` character at the end of the unzip command (above) tells the computer to extract the zipfile in the current directory. 
+_The `.` character at the end of the `unzip` command tells the computer to extract the zipfile in the current directory._ 
 
-Now we should have following data files in our computer instance:
+3. Now we should have following data files in our computer instance:
 
 
 
