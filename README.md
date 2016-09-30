@@ -3,15 +3,15 @@ Lesson 5: Reading and Writing Files in Python.
 
 ## Lesson overview
 1. [Summary of early course feedback](Lesson/midterm-feedback.md)
-2. [Reading data from a file](reading-data-from-file.md)
+2. [Reading data from a file](Lesson/reading-data-from-file.md)
   - Data reading methods in Python
   - Assigning read data to variables
   - Skipping headers and other unwanted file data (comment lines, etc.)
-3. [Reading multiple data files](reading-multiple-files.md)
+3. [Reading multiple data files](Lesson/reading-multiple-files.md)
   - os functionalities ( os.walk(), os.path.basename(), os.path.join(), os.path.dirname(), os.makedirs() )
   - glob functionalities (Unix path expansion rules)
   - Searching specific files ( if filename.endswith('.csv') ) and using glob modules Unix-like search functionanilities
-4. [Writing data to a file](writing-to-file.md)
+4. [Writing data to a file](Lesson/writing-to-file.md)
   - Writing data to a new file
   - Appending data to an existing file
 
