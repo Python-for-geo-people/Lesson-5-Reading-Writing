@@ -6,11 +6,11 @@ This lesson is partially based on the [Software Carpentry group's](http://softwa
 
 ## Topics
 
- 1. [Download and extract data](#1.-Download-and-extract-data)
- 2. [Listing files](#2.-Listing-files)
- 3. [Reading data from multiple files](#3.Reading-data-from-multiple-files)
+ 1. [Download and extract data](#download)
+ 2. [Listing files](#list-files)
+ 3. [Reading data from multiple files](#read-multiple)
  
-## 1. Download and extract data
+##<a name="download"></a> 1. Download and extract data
 
 During this demo the data is about inflammation in patients who have been given a new treatment for arthritis that are stored in multiple data files that 
 are stored in comma-separated values (CSV).
@@ -28,7 +28,7 @@ are stored in comma-separated values (CSV).
 
  ![Data Folder](../img/data-folder.PNG)
 
-## 2. Listing files 
+##<a name="list-files"></a> 2. Listing files 
 
 Listing and searching for file pathnames from file system can be done using a specific module called **[glob](https://docs.python.org/3/library/glob.html)**.
  
@@ -64,7 +64,7 @@ We provide those patterns as strings: the character * matches zero or more chara
   ['/home/geo/data/small-03.csv', '/home/geo/data/small-02.csv', '/home/geo/data/small-01.csv']
  ```
 
-## 3. Reading data from multiple files
+##<a name="read-multiple"></a> 3. Reading data from multiple files
 
 As the previous examples show, glob.glob’s result is a **list** of file and directory paths in arbitrary order. This means we can loop over it to do something with each filename in turn. 
 What we want to do next is to read the first line of each file and add it to a list called `headers`.
