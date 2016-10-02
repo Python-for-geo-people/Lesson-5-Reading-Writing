@@ -55,19 +55,28 @@ To start we need to open the file for reading by typing the following into the *
         <commands to read file...>
     ```
 Here we are using the `open()` function in combination with the `with` statement in Python.
-*I suppose an explanation is required*.
-The general format used for opening files in Python is `open(<filename>, <mode>)`, where `filename` is the name of the file and `mode` is either `"r"` for reading a file or `"w"` for writing to a file.
-In our case, we open our file (`"GVP-Volcano-Lat-Lon-Elev.csv"`) to be read (`"r"`).
-In addition, we are using the `with` statement.
-What this does is open our file and assign access to the file to a variable (`infile`).
-Thus, using the variable `infile` we can access the file contents anywhere within the indented block of code beneath the `with` statement.
-For instance, we will see how to read the file in the next point.
-The main advantage of using the `with` statement is that normally you need to manually close file access in Python (using the `file.close()` method), but when using the `with` statement the file is automatically closed at the end of the indented block.
-This ensures you don't forget to close it yourself.
-Closing files is important because sometimes the final changes made to a file will not be written until the file is closed, for example.
+I suppose an explanation is required.
+  - The general format used for opening files in Python is `open(<filename>, <mode>)`, where `filename` is the name of the file and `mode` is either `"r"` for reading a file or `"w"` for writing to a file.
+  In our case, we open our file (`"GVP-Volcano-Lat-Lon-Elev.csv"`) to be read (`"r"`).
+  - In addition, we are using the `with` statement.
+  What this does is open our file and assign access to the file to a variable (`infile`).
+  Thus, using the variable `infile` we can access the file contents anywhere within the indented block of code beneath the `with` statement.
+  For instance, we will see how to read the file in the next point.
+  - The main advantage of using the `with` statement is that normally you need to manually close file access in Python (using the `file.close()` method), but when using the `with` statement the file is automatically closed at the end of the indented block.
+  This ensures you don't forget to close it yourself.
+  Closing files is important because sometimes the final changes made to a file will not be written until the file is closed, for example.
 2. With our file open, we can now proceed to read the file.
 
     ```python
+    """
+    readall.py
+    
+    A simple script for reading the entire contents of a file.
+    
+    dwhipp - 2.10.2016
+    """
+    
+    # Read entire data file
     with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
         data = infile.read()
         print(data)
@@ -104,6 +113,15 @@ Obviously, it is nice to read the entire file at once, but this may be a problem
 Thus, we can create a list `datalist` that contains each line of the file as follows:
 
     ```python
+    """
+    readall.py
+    
+    A simple script for reading the entire contents of a file.
+    
+    dwhipp - 2.10.2016
+    """
+    
+    # Read entire data file, separate lines in a list
     with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
         data = infile.read()
         datalist = data.splitlines()
@@ -117,7 +135,80 @@ We can confirm this by running the example above, which should output the follow
     ```
 We are now ready to start interacting with our file data.
 
-## Interacting with file data
+## Interacting with our file data
+We currently have a Python list `datalist` that contains our data file contents.
+A common task in Python is to separate the values on each line into separate Python lists that can be manipuated independently.
+Below, we will create a set of 4 Python lists, one for each column in our data file, and fill them with the values from the 10 lines of our file.
+
+1. We will first need to create our empty lists for storing the data file values.
+We can do this by creating empty lists beneath the indented block for reading the file.
+
+    ```python
+    """
+    readall.py
+    
+    A simple script for reading the entire contents of a file.
+    
+    dwhipp - 2.10.2016
+    """
+
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
+        data = infile.read()
+        datalist = data.splitlines()
+
+    # Create empty lists to store file data
+    VolcanoID = []
+    Latitude = []
+    Longitude = []
+    Elevation = []
+    ```
+**Note**: These empty lists are not indented as part of the file reading block.
+2. With the empty lists created, we now need to go through each line of the file, separate the values on each line, and add them to the lists we've created.
+We can do this using the `str.split()` method and a `for` loop.
+
+    ```python
+    """
+    readall.py
+    
+    A simple script for reading the entire contents of a file.
+    
+    dwhipp - 2.10.2016
+    """
+
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
+        data = infile.read()
+        datalist = data.splitlines()
+
+    # Create empty lists to store file data
+    VolcanoID = []
+    Latitude = []
+    Longitude = []
+    Elevation = []
+
+    # Loop over lines in file, append to lists 
+    for line in datalist:
+        splitline = line.split(",")
+        VolcanoID.append(splitline[0])
+        Latitude.append(splitline[1])
+        Longitude.append(splitline[2])
+        Elevation.append(splitline[3])
+    ```
+So, what happened?
+  - First, we have used a `for` loop to go over each value in the list `datalist`, assigning each line to the variable `line` in the loop.
+  - Second, we have created a new variable `splitline` that is itself a Python list.
+  In this case, `line.split(",")` separates all of the values in the line at each comma (`,`) and stores the split values in a list (`splitline`).
+  You can see this list for the final line in the data file by typing `print(splitline)` in the IPython console.
+  - Lastly, since each of the four values in each line of the data file have been separated, we can add the values to the lists we've created earlier using the `list.append()` method.
+  In this case, we append the corresponding values in the list `splitline` by using their index values.
+  This may seem complicated, but if you look at the code line-by-line, we're not really doing too many new things here.
+
+
+
+
+
+
 Once we have read the entire contents of a data file using `file.read()`, the resulting character string will need to be broken up into parts that can be assigned to variables for use in Python.
 
 1. As we have seen, we currently have a 10-line-long data file stored in a character string as `data`.
@@ -130,5 +221,5 @@ We first need to separate the file into
 
 ## Pro tips
 ### Reading files using the `with` keyword
-- Reading files using the `with` keyword
+- Spliting lines separated by other characters
 - `file.readlines()`
