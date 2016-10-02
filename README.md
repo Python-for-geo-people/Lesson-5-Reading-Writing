@@ -15,6 +15,8 @@ Lesson 5: Reading and Writing Files in Python.
   - [Appending to a file](Lesson/writing-to-file.md#append)
   - [Useful functions related to filepaths](Lesson/writing-to-file.md#useful-functions)
   - [Copying contents from a file into another](Lesson/writing-to-file.md#copying-files)
+5. [Exercise 5]()
+
   
 ## Resources
 - Past lesson materials
