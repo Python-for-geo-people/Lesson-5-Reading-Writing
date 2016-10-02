@@ -14,21 +14,23 @@ This lesson is partially based on the [Software Carpentry group's](http://softwa
 - Using the `os` module (`os.path`, `os.makedirs()`
 - Using the `glob` module for finding files with a common name/extension
 
-## 1. Download data and extract
+## 1. Download and extract data
 
 During this demo the data is about inflammation in patients who have been given a new treatment for arthritis that are stored in multiple data files that 
 are stored in comma-separated values (CSV).
  
 1. **<a href="https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing/raw/master/Data/python-novice-inflammation-data.zip">Download the data</a>** (a zip-file) into the HOME folder of your computer instance
+    - Note: _Mozilla may automatically donwnload the data into "Downloads" -folder. If so, move the *.zip package to HOME folder.  
+
 2. Extract the data using `unzip` command in Terminal window:
 
   ```bash
   $ cd $HOME
-  $ unzip python-novice-inflammation-data.zip .
+  $ unzip python-novice-inflammation-data.zip 
   ```
-_The `.` character at the end of the `unzip` command tells the computer to extract the zipfile in the current directory._ 
+3. Now we should have "data" folder in our HOME directory of our computer instance:
 
-3. Now we should have following data files in our computer instance:
+ ![../img/data-folder.PNG]
 
 
 
