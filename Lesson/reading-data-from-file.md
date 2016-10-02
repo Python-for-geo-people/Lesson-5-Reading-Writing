@@ -7,11 +7,12 @@ Later in the course you will be introduced to more sophisticated libraries that 
 The data used in this part of the exercise is from the [Smithsonian Institution's volcano database](http://volcano.si.edu/).
 
 ## Topics
-1. [Downloading and extracting the data]()
-2. []()
-3. []()
-4. []()
-5. []()
+1. [Downloading and extracting the data](#downloading-and-extracting-the-data)
+2. [Preparing to read the data files in **Spyder**](#preparing-to-read-the-data-files-in-spyder)
+3. [Reading an entire file at once](#reading-an-entire-file-at-once)
+4. [Interacting with our file data](#interacting-with-our-file-data)
+5. [Skipping file headers and other unwanted data](#skipping-file-headers-and-other-unwanted-data)
+6. [Pro tips](#pro-tips)
 
 ## Downloading and extracting the data
 1. You can start by downloading the [volcano data zip file](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing/raw/master/Data/volcano-data.zip) we will be using for this part of the lesson.
