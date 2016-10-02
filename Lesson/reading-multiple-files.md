@@ -10,9 +10,6 @@ This lesson is partially based on the [Software Carpentry group's](http://softwa
  2. [Listing files](#2.-Listing-files)
  3. [Reading data from multiple files](#3.Reading-data-from-multiple-files)
  
-- Using the `os` module (`os.path`, `os.makedirs()`
-- Using the `glob` module for finding files with a common name/extension
-
 ## 1. Download and extract data
 
 During this demo the data is about inflammation in patients who have been given a new treatment for arthritis that are stored in multiple data files that 
