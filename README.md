@@ -9,7 +9,7 @@ Lesson 5: Reading and Writing Files in Python.
   - Skipping headers and other unwanted file data (comment lines, etc.)
 3. [Reading multiple data files](Lesson/reading-multiple-files.md)
   - [Listing files](Lesson/reading-multiple-files.md#2.-Listing-files)
-  - [Reading data from multiple files](Lesson/reading-multiple-files.md#3.Reading-data-from-multiple-files)
+  - [Reading data from multiple files](Lesson/reading-multiple-files.md#3.-Reading-data-from-multiple-files)
 4. [Writing data to a file](Lesson/writing-to-file.md)
   - [Writing to a new file](Lesson/writing-to-file.md#Writing-to-a-new-file)
   - [Appending to a file](Lesson/writing-to-file.md#append)
