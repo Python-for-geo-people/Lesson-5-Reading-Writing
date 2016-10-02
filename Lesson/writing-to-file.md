@@ -91,6 +91,10 @@ Let's add another two lines at once into our test.txt -file using writelines -fu
           w.writelines([third_line, fourth_line])
   ```
 
+Now we have four lines in our test.txt file:
+
+ ![3-4 lines](../img/third-line-of-text.PNG)
+
 ## 4. Useful functions related to filepaths
 
  - os.path.basename()

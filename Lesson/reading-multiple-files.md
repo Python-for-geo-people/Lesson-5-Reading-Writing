@@ -113,8 +113,9 @@ What we want to do next is to read the first line of each file and add it to a l
     '0,0,0,2,4,5,5,4,4,6,8,2,3,8,7,13,8,14,17,6,5,15,14,13,8,6,9,9,11,10,3,5,3,1,5,4,4,3,2,1\n']
    ```
 
-Now we have printed the first lines of each file in the data directory. This is a handy way to find out what kind of data we have in the files. This ways we can for example see that the separator in
-each file is comma, and that each file contains numerical data, and there does not exist column names in any of the files. These are all important information to know when starting to do data analysis.  
+Now we have printed the first lines of each file in the data directory. This is a handy way to find out what kind of data we have in the files. In this way
+it is for example possible to see that 1) the separator in each file is comma, and 2) each file contains numerical data, 
+and 3) there does not exist column names in any of the files. All of this is important information to know when starting to do data analysis.  
 
 ## Next steps
 
