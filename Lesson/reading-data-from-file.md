@@ -26,7 +26,7 @@ The data used in this part of the exercise is from the [Smithsonian Institution'
     ```
 You should now have a directory titled `volcano-data` in your home directory.
 It contains two files based on [version 4.5.1 of the Smithsonian Institution's Holocene volcano database (updated 23.9.2016)](http://volcano.si.edu/list_volcano_holocene.cfm):
-  - `GVP-Volcano-List.csv`: The complete Holocene volcano database file in `.csv` format and with header lines.
+  - `GVP-Volcano-List.csv`: The first 100 lines of the Holocene volcano database file in `.csv` format and with header lines.
   **Note**: Values are separated by semicolons (`;`) in this version of the file rather than commas (`,`).
   - `GVP-Volcano-Lat-Lon-Elev.csv`: The volcano ID, latitude, longitude and elevation for the first 10 volcanoes in the Holocene volcano database.
   There are no headers in this file and values are separated by commas (`,`).
@@ -43,7 +43,7 @@ This can be done by clicking on the button shown below to set the console's work
 
 We should now be ready to continue and start working with our data files.
 
-## File reading option 1: Reading an entire file at once
+## Reading an entire file at once
 There are several ways in which data can be read from a file in Python, but some are more common (or better in some cases) than others.
 We will focus on two ways to read files that can be easily used for many types of data files.
 
@@ -202,24 +202,194 @@ So, what happened?
   You can see this list for the final line in the data file by typing `print(splitline)` in the IPython console.
   - Lastly, since each of the four values in each line of the data file have been separated, we can add the values to the lists we've created earlier using the `list.append()` method.
   In this case, we append the corresponding values in the list `splitline` by using their index values.
-  This may seem complicated, but if you look at the code line-by-line, we're not really doing too many new things here.
+  This may seem complicated, but if you look at the code line by line, we're not really doing too many new things here.
 
+## Skipping file headers and other unwanted data
+In our example above, we had a data file with 10 lines, and each line had 4 values separated by commas.
+It is more typical to deal with data files that include *headers*, which describe the data in the file but are not necessarily data that might be manipulated in a Python script.
+Often we simply want to ignore these lines when creating variable lists with data to manipulate.
+How headers are handled generally falls into two categories.
 
+### Headers of a known number of lines
+In many cases, the header in a data file will occupy the top few lines of a data file and we can simply skip over the header by not storing header data in the lists used for other file data.
+We can see and example of how to do this by using the other data file for this part of the lesson (`GVP-Volcano-List.csv`).
+1. Let's start by editing the `readall.py` script we created above to read the other data file (`GVP-Volcano-List.csv`) and saving the modified file as `headread.py`.
 
+    ```python
+    """
+    headread.py
+    
+    A simple script for reading the entire contents of a file and skipping the header.
+    
+    dwhipp - 2.10.2016
+    """
 
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-List.csv", "r") as infile:
+        data = infile.read()
+        datalist = data.splitlines()
 
+    # Create empty lists to store file data
+    VolcanoID = []
+    Latitude = []
+    Longitude = []
+    Elevation = []
 
-Once we have read the entire contents of a data file using `file.read()`, the resulting character string will need to be broken up into parts that can be assigned to variables for use in Python.
+    # Loop over lines in file, append to lists 
+    for line in datalist:
+        splitline = line.split(";")
+        VolcanoID.append(splitline[0])
+        Latitude.append(splitline[8])
+        Longitude.append(splitline[9])
+        Elevation.append(splitline[10])
+    ```
+So this looks a bit different than our earlier script.
+We've made three significant changes to this point:
+  - The script now opens the data file `GVP-Volcano-List.csv`, which contains the first 100 lines of [version 4.5.1 of the Smithsonian Institution's Holocene volcano database (updated 23.9.2016)](http://volcano.si.edu/list_volcano_holocene.cfm).
+  - Lines are split using the semicolon (`;`), rather than comma (`,`) since the semicolon is used in this data file.
+  - The index values of `splitline` have been changed to reflect the fact that the latitude, longitude, and elevation data are in different locations in this data file.
+2. At this point, we know the first two lines of the data file are the header, and these lines should be skipped when filling the lists of the VolcanoID, etc.
+We can skip over the header lines by changing the `for` loop used to split each line in the file as follows:
 
-1. As we have seen, we currently have a 10-line-long data file stored in a character string as `data`.
-In this form, we cannot directly interact with any of the values from the file.
-We first need to separate the file into 
+    ```python
+    """
+    headread.py
+    
+    A simple script for reading the entire contents of a file and skipping the header.
+    
+    dwhipp - 2.10.2016
+    """
 
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-List.csv", "r") as infile:
+        data = infile.read()
+        datalist = data.splitlines()
 
-## File reading option 2: Reading an entire file line-by-line
+    # Create empty lists to store file data
+    VolcanoID = []
+    Latitude = []
+    Longitude = []
+    Elevation = []
 
+    # Loop over lines in file, append to lists, skip first 2 lines of file
+    for i in range(2,len(datalist)):
+        line = datalist[i]
+        splitline = line.split(";")
+        VolcanoID.append(splitline[0])
+        Latitude.append(splitline[8])
+        Longitude.append(splitline[9])
+        Elevation.append(splitline[10])
+    ```
+Here we have made two key changes.
+  - First, instead of having a `for` loop that loops over each line in `datalist`, we not use the `range()` function to start at line 3 (index 2) and split lines in the file from there to the end of the file, the index value corresponding to the length of the `datalist` list.
+  - Second, since we are now using the index variable `i` in the `for` loop, we need to explicitly define the variable `line` for each iteration in the loop.
+  In this case, we simply set `line` to be equal to the value at index `i` in the `datalist` list.
+
+### Headers beginning with a certain character
+Another common form of file header is one that starts with a specific character, such as `#`.
+In this case we don't need to know the number of lines occupied by the header, but simply to ignore any line starting with `#`, for example.
+1. We can start by taking a copy of the first example of the `headread.py` script above and saving it as `charheadread.py`.
+
+    ```python
+    """
+    charheadread.py
+    
+    A simple script for reading the entire contents of a file and skipping a header starting with
+    a specific character.
+    
+    dwhipp - 2.10.2016
+    """
+
+    # Define starting character for headers/comments
+    headchar = "#"
+
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-List.csv", "r") as infile:
+        data = infile.read()
+        datalist = data.splitlines()
+
+    # Create empty lists to store file data
+    VolcanoID = []
+    Latitude = []
+    Longitude = []
+    Elevation = []
+
+    # Loop over lines in file, append to lists 
+    for line in datalist:
+        splitline = line.split(";")
+        VolcanoID.append(splitline[0])
+        Latitude.append(splitline[8])
+        Longitude.append(splitline[9])
+        Elevation.append(splitline[10])
+    ```
+Here all we have done is change the documentation string at the top of the script and define the character `headchar` that should be used to identify the start of a header (or comment) line in the data file.
+2. Now we can modify the script within the `for` loop for processing the lines of the file to ignore any line starting with `headchar`.
+
+    ```python
+    """
+    charheadread.py
+    
+    A simple script for reading the entire contents of a file and skipping a header starting with
+    a specific character.
+    
+    dwhipp - 2.10.2016
+    """
+
+    # Define starting character for headers/comments
+    headchar = "#"
+
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-List.csv", "r") as infile:
+        data = infile.read()
+        datalist = data.splitlines()
+
+    # Create empty lists to store file data
+    VolcanoID = []
+    Latitude = []
+    Longitude = []
+    Elevation = []
+
+    # Loop over lines in file, append to lists 
+    for line in datalist:
+        # Append data only for lines that do not start with headchar
+        if line[0] != headchar:
+            splitline = line.split(";")
+            VolcanoID.append(splitline[0])
+            Latitude.append(splitline[8])
+            Longitude.append(splitline[9])
+            Elevation.append(splitline[10])
+    ```
+The change in this case is simple.
+We have added an `if` statement to test if the first character of a given line is not equal to `headchar`.
+If that condition is met, the line will be processed normally.
+In this way, we will simply ignore lines starting with `headchar`.
 
 ## Pro tips
-### Reading files using the `with` keyword
-- Spliting lines separated by other characters
-- `file.readlines()`
+### Spliting lines separated by other characters
+
+### Reading an entire file line-by-line
+The example we've seen above will work nicely for small files, but often it is easier to read file data line-by-line and not require storing the entire file in memory.
+This is particularly beneficial in cases where you extract only a small amount of the data in a file.
+Here we'll explore reading data from a file line by line.
+
+We can start by using a similar template to that used earlier for opening a file, but rather than using the `file.read()` method to read the entire file, we will use a `for` loop to go over each line in the file.
+
+    ```python
+    """
+    readlines.py
+    
+    A simple script for reading the contents of a file line by line in Python.
+    
+    dwhipp - 2.10.2016
+    """
+    
+    # Read entire data file, separate lines in a list
+    with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
+        datalist = []
+        for line in infile:
+            datalist.append(line)
+    ```
+Here we start by adding a new empty list `datalist` to which we will append each line of the file that is read.
+The `for` loop that follows will read each line in the file `infile` and allow us to manipulate them one by one.
+In this way we could, for example, split each line as it is read and store only some part of each line in the list `datalist`.
+Depending on the size of data you encounter, this may be the only way to handle your datasets.
