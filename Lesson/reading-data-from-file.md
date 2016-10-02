@@ -1,16 +1,17 @@
 # Reading data from a file
 Our first task in this week's lesson is to learn how to read data from files.
 In Python this comprises two tasks: (1) Opening the file to be able to read in the contents, and (2) reading in the contents of the file.
-In terms of how the data is read, there are several options of which we will see two.
+In terms of how the data is read in Python, there are many and we will focus on one simple form.
 Later in the course you will be introduced to more sophisticated libraries that can help with reading data files, but for now we will focus on the traditional way in which data files can be read in Python.
 
 The data used in this part of the exercise is from the [Smithsonian Institution's volcano database](http://volcano.si.edu/).
 
 ## Topics
-- How to open files using `with`
-- `file.read()`, `file.readline()`
-- Splitting strings, escape characters, assigning to variables
-- Skipping headers and other unwanted file data (comment lines, etc.)
+1. [Downloading and extracting the data]()
+2. []()
+3. []()
+4. []()
+5. []()
 
 ## Downloading and extracting the data
 1. You can start by downloading the [volcano data zip file](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing/raw/master/Data/volcano-data.zip) we will be using for this part of the lesson.
@@ -213,6 +214,7 @@ How headers are handled generally falls into two categories.
 ### Headers of a known number of lines
 In many cases, the header in a data file will occupy the top few lines of a data file and we can simply skip over the header by not storing header data in the lists used for other file data.
 We can see and example of how to do this by using the other data file for this part of the lesson (`GVP-Volcano-List.csv`).
+
 1. Let's start by editing the `readall.py` script we created above to read the other data file (`GVP-Volcano-List.csv`) and saving the modified file as `headread.py`.
 
     ```python
@@ -288,6 +290,7 @@ Here we have made two key changes.
 ### Headers beginning with a certain character
 Another common form of file header is one that starts with a specific character, such as `#`.
 In this case we don't need to know the number of lines occupied by the header, but simply to ignore any line starting with `#`, for example.
+
 1. We can start by taking a copy of the first example of the `headread.py` script above and saving it as `charheadread.py`.
 
     ```python
