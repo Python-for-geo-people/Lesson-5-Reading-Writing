@@ -4,7 +4,7 @@
 - [Writing to a new file](#Writing-to-a-new-file)
 - [Appending to a file](#append)
 - [(Not) overwriting data files](#overwrite)
-- [Useful functions related to filepaths](#Useful-functions-related-to-filepaths)
+- [Useful functions related to filepaths](#useful-functions)
 - [Copying contents from a file into another](#copying-files)
 
 ##Writing to a new file
@@ -95,7 +95,7 @@ Now we have four lines in our test.txt file:
 
  ![3-4 lines](../img/third-line-of-text.PNG)
 
-##Useful functions related to filepaths
+##<a name="useful-functions"></a> Useful functions related to filepaths
 
 When dealing with file paths in Python there are several useful functions available in a sub-module called **[os.path](https://docs.python.org/3/library/os.path.html)**.
 
