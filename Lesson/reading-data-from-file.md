@@ -377,21 +377,21 @@ Here we'll explore reading data from a file line by line.
 
 We can start by using a similar template to that used earlier for opening a file, but rather than using the `file.read()` method to read the entire file, we will use a `for` loop to go over each line in the file.
 
-    ```python
-    """
-    readlines.py
-    
-    A simple script for reading the contents of a file line by line in Python.
-    
-    dwhipp - 2.10.2016
-    """
-    
-    # Read entire data file, separate lines in a list
-    with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
-        datalist = []
-        for line in infile:
-            datalist.append(line)
-    ```
+```python
+"""
+readlines.py
+
+A simple script for reading the contents of a file line by line in Python.
+
+dwhipp - 2.10.2016
+"""
+
+# Read entire data file, separate lines in a list
+with open("GVP-Volcano-Lat-Lon-Elev.csv", "r") as infile:
+    datalist = []
+    for line in infile:
+        datalist.append(line)
+```
 Here we start by adding a new empty list `datalist` to which we will append each line of the file that is read.
 The `for` loop that follows will read each line in the file `infile` and allow us to manipulate them one by one.
 In this way we could, for example, split each line as it is read and store only some part of each line in the list `datalist`.
