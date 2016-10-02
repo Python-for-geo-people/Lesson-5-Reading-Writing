@@ -124,4 +124,4 @@ Or, go [back to main page](../README.md)
 
 ## Footnotes
 
-- \[0\] Similar search patterns can be used when finding files in Terminal.
+- \[0\]: Similar search patterns can be used when finding files in Terminal.
