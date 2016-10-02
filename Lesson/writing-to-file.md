@@ -74,8 +74,10 @@ Let's write those two lines now with adding the new-line character at the end:
 Now our test.txt file looks correct:
 
  ![Second line of text, correct](../img/second-line-of-text-fixed.PNG)
+ 
+Now the each sentence are correctly written in separate lines. 
 
-5. There is also another function called `.writelines()` that writes a list of texts into a file where each list item will be written into the output file. 
+<a name="writelines"></a>5. There is also another function called `.writelines()` that writes a list of texts into a file where each list item will be written into the output file. 
 Let's add another two lines at once into our test.txt -file using writelines -function:
     
   ```python
