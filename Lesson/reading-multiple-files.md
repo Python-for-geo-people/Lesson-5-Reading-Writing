@@ -30,7 +30,7 @@ are stored in comma-separated values (CSV).
   ```
 3. Now we should have "data" folder in our HOME directory of our computer instance:
 
- ![../img/data-folder.PNG]
+ ![Data Folder](../img/data-folder.PNG)
 
 
 
