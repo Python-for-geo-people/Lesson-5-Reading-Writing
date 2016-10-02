@@ -6,7 +6,7 @@ This lesson is partially based on the [Software Carpentry group's](http://softwa
 
 ## Topics
 
- 1. [Download data and extract](#1.-Download-data-and-extract)
+ 1. [Download and extract data](#1.-Download-and-extract-data)
  2. [Listing files](#2.-Listing-files)
  3. [Reading data from multiple files](#3.Reading-data-from-multiple-files)
  

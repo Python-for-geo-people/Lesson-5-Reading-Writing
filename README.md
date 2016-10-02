@@ -8,13 +8,14 @@ Lesson 5: Reading and Writing Files in Python.
   - Assigning read data to variables
   - Skipping headers and other unwanted file data (comment lines, etc.)
 3. [Reading multiple data files](Lesson/reading-multiple-files.md)
-  - os functionalities ( os.walk(), os.path.basename(), os.path.join(), os.path.dirname(), os.makedirs() )
-  - glob functionalities (Unix path expansion rules)
-  - Searching specific files ( if filename.endswith('.csv') ) and using glob modules Unix-like search functionanilities
+  - [Listing files](Lesson/reading-multiple-files.md#2.-Listing-files)
+  - [Reading data from multiple files](Lesson/reading-multiple-files.md#3.Reading-data-from-multiple-files)
 4. [Writing data to a file](Lesson/writing-to-file.md)
-  - Writing data to a new file
-  - Appending data to an existing file
-
+  - [Writing to a new file](Lesson/writing-to-file.md#Writing-to-a-new-file)
+  - [Appending to a file](Lesson/writing-to-file.md#append)
+  - [Useful functions related to filepaths](Lesson/writing-to-file.md#useful-functions)
+  - [Copying contents from a file into another](Lesson/writing-to-file.md#copying-files)
+  
 ## Resources
 - Past lesson materials
   - [Functions and modules](https://github.com/Python-for-geo-people/Functions-and-modules)
