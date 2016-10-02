@@ -7,7 +7,7 @@
 - [Useful functions related to filepaths](#4.Useful-functions-related-to-filepaths)
 - [Copying contents from a file into another](#copying-files)
 
-## Writing to a new file
+##Writing to a new file
 
 [Previous materials](reading-multiple-files.md) focused on reading data from file(s) but for sure it is as important to know how to write contents into a file. Writing data into a file uses the 
 same `open` -function that we used for reading the data but when writing we use the `w` -mode.
