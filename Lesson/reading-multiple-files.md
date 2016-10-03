@@ -21,7 +21,7 @@ are stored in comma-separated values (CSV).
 2. Extract the data using `unzip` command in Terminal window:
 
   ```bash
-  $ cd $HOME
+  $ cd
   $ unzip python-novice-inflammation-data.zip 
   ```
 3. Now we should have "data" folder in the HOME directory of our computer instance with following files:
