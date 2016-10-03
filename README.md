@@ -4,9 +4,10 @@ Lesson 5: Reading and Writing Files in Python.
 ## Lesson overview
 1. [Summary of early course feedback](Lesson/midterm-feedback.md)
 2. [Reading data from a file](Lesson/reading-data-from-file.md)
-  - Data reading methods in Python
-  - Assigning read data to variables
-  - Skipping headers and other unwanted file data (comment lines, etc.)
+  - [Reading an entire file at once](Lesson/reading-data-from-file.md#reading-an-entire-file-at-once)
+  - [Interacting with our file data](Lesson/reading-data-from-file.md#interacting-with-our-file-data)
+  - [Skipping file headers and other unwanted data](Lesson/reading-data-from-file.md#skipping-file-headers-and-other-unwanted-data)
+  - [Pro tips](Lesson/reading-data-from-file.md#pro-tips)
 3. [Reading multiple data files](Lesson/reading-multiple-files.md)
   - [Listing files](Lesson/reading-multiple-files.md#list-files)
   - [Reading data from multiple files](Lesson/reading-multiple-files.md#read-multiple)
@@ -16,7 +17,7 @@ Lesson 5: Reading and Writing Files in Python.
   - [Useful functions related to filepaths](Lesson/writing-to-file.md#useful-functions)
   - [Copying contents from a file into another](Lesson/writing-to-file.md#copying-files)
 5. [Exercise 5]()
-
+6. [Hints for Exercise 5](Lesson/hints-ex5.md)
   
 ## Resources
 - Past lesson materials
