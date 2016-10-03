@@ -16,7 +16,7 @@ During this demo the data is about inflammation in patients who have been given 
 are stored in comma-separated values (CSV).
  
 1. **<a href="https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing/raw/master/Data/python-novice-inflammation-data.zip">Download the data</a>** (a zip-file) into the HOME folder of your computer instance
-    - Note: _Mozilla may automatically donwnload the data into "Downloads" -folder. If so, move the *.zip package to HOME folder.  
+    - Note: _Mozilla may automatically donwnload the data into "Downloads" -folder. If so, move the *.zip package to HOME folder._ 
 
 2. Extract the data using `unzip` command in Terminal window:
 
