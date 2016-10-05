@@ -41,6 +41,12 @@ The example below may help make things more clear:
 2. Loop over that list. For each file:
   - Open the file for reading.
   - Create two empty lists for storing the daily temperatures for summer and winter.
-  - Loop over every 
+  - Loop over every line in each file. For each line:
+    - Split the line into a list of values using the commas.
+    - Extract the value for the month using the list item containing the date in the split line list above.
+    - Check to see if the month is a summer or winter month. If so, append the temperature to the corresponding temperature list.
+  - After checking all lines, calculate the average summer and winter temperatures.
+  - Open the summer and winter average temperature files for appending.
+  - Append the year and average temperature.
 
 ## Part 3 - Saving your seasonal average files to GitHub
