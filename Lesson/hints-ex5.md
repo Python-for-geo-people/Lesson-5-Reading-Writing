@@ -1,6 +1,20 @@
 # Hints for Exercise 5
+Below are some tips for working on Exercise 5.
+Each section contains some practical tips for the different parts of the exercise, and we have included some pseudocode for Parts 1 and 2 to help guide you in writing your code.
+As a reminder, pseudocode is simply an explanation of what the code should do in plain English (or your language of choice).
 
 ## Part 1 - Reading and dividing the data file
+### Pseudocode
+1. Open the `816295.csv` data file for reading.
+2. Read the values into a list where each list entry is one line of the file.
+3. Loop over all lines in the resulting list (excluding the header). For each line:
+  - Split the line into a list of values using the commas.
+  - Extract the value for the year using the list item containing the date in the split line list above.
+  - Create a varaible that is contains a character string of the name of the output file for that year (e.g., `"AA-1926.csv"`).
+  - Open the file named above for writing.
+  - Write the entire line to that data file.
+
+### Practical tips
 1. **Extracting the year for each line of the data file**.
 In order to isolate the year when processing the data in the data file for this exercise, you need to use a substring, or part of a character string, from the values in column 6 of the `816295.csv` data file.
 Those values have the form `YYYYMMDD` where `YYYY` is the year of the observation, `MM` is the month, and `DD` is the day.
