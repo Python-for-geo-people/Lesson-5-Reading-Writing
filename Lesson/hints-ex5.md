@@ -11,7 +11,7 @@ As a reminder, pseudocode is simply an explanation of what the code should do in
   - Split the line into a list of values using the commas.
   - Extract the value for the year using the list item containing the date in the split line list above.
   - Create a varaible that is contains a character string of the name of the output file for that year (e.g., `"AA-1926.csv"`).
-  - Open the file named above for writing.
+  - Open the file named above for appending.
   - Write the entire line to that data file.
 
 ### Practical tips
