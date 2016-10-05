@@ -36,5 +36,11 @@ The example below may help make things more clear:
 **Note**: Like the `range()` function, the last index value given in a range of values is not included in the list of indices.
 
 ## Part 2 - Calculating annual summer and winter temperatures
+### Pseudocode
+1. Create a list of names of all of the files generated in Part 1.
+2. Loop over that list. For each file:
+  - Open the file for reading.
+  - Create two empty lists for storing the daily temperatures for summer and winter.
+  - Loop over every 
 
 ## Part 3 - Saving your seasonal average files to GitHub
