@@ -397,3 +397,8 @@ Here we start by adding a new empty list `datalist` to which we will append each
 The `for` loop that follows will read each line in the file `infile` and allow us to manipulate them one by one.
 In this way we could, for example, split each line as it is read and store only some part of each line in the list `datalist`.
 Depending on the size of data you encounter, this may be the only way to handle your datasets.
+
+## 
+**Next**: [Reading multiple data files](reading-multiple-files.md)<br/>
+**Home**: [Lesson 5 main page](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing)<br/>
+**Previous**: [Summary of early course feedback](midterm-feedback.md)
