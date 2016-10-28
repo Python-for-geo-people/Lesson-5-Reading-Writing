@@ -53,3 +53,8 @@
  - *More hints about programming practices (run and test your code frequently, don't use spaces in variable names etc.)*
  - *At the end of lesson material page, give link to the next page, previous page, main page*
  - Practicals should be in the same classroom as lectures where there are two screens
+
+## 
+**Next**: [Reading data from a file](reading-data-from-file.md)<br/>
+**Home**: [Lesson 5 main page](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing)<br/>
+**Previous**: [Intro to version control and GitHub](intro-to-GitHub.md)
