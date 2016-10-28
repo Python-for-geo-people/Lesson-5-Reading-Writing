@@ -16,7 +16,7 @@ Lesson 5: Reading and Writing Files in Python.
   - [Appending to a file](Lesson/writing-to-file.md#append)
   - [Useful functions related to filepaths](Lesson/writing-to-file.md#useful-functions)
   - [Copying contents from a file into another](Lesson/writing-to-file.md#copying-files)
-5. [Exercise 5](https://classroom.github.com/assignment-invitations/17f0f2ee87873cb1bcb2c6a9ec228c42)
+5. [Exercise 5: Analysing NOAA climate data](https://classroom.github.com/assignment-invitations/17f0f2ee87873cb1bcb2c6a9ec228c42)
 6. [Hints for Exercise 5](Lesson/hints-ex5.md)
   
 ## Resources
