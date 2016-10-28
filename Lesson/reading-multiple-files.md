@@ -117,12 +117,11 @@ Now we have printed the first lines of each file in the data directory. This is 
 it is for example possible to see that 1) the separator in each file is comma, and 2) each file contains numerical data, 
 and 3) there does not exist column names in any of the files. All of this is important information to know when starting to do data analysis.  
 
-## Next steps
-
-Next, continue and learn how to [write data into a file in Python](writing-to-file.md).
- 
-Or, go [back to main page](../README.md)
-
 ## Footnotes
 
 - \[0\]: Similar search patterns can be used when finding files in Terminal.
+
+## 
+**Next**: [Writing data to a file](writing-to-file.md)<br/>
+**Home**: [Lesson 5 main page](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing)<br/>
+**Previous**: [Reading data from a file](reading-data-from-file.md)
