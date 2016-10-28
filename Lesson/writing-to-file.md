@@ -182,16 +182,13 @@ And each of those files have the first line as content:
 
  ![Results](../img/copy-files-1-line-content.PNG)
  
-## Next steps
-
-Now you can start working with the Exercise 5.
-
-Or, go [back to main page](../README.md)
-
 ## Footnotes
 
 - \[0\]: When reading / writing in Python, it is best to use the `with` -statement as it takes care of closing your file after you have read/written something into your file. *Closing* the file takes
 care of saving the data into that file. If the file is not closed after writing something into it, the contents won't be saved into that file. It is similar idea than when thinking of writing something
 into a Word template document but without saving it anywhere. You can find more info about how to write data without `with` -statement, and how to close files from **[here](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)**.   
 
-
+## 
+**Next**: [Exercise 5: Analysing NOAA climate data](https://classroom.github.com/assignment-invitations/17f0f2ee87873cb1bcb2c6a9ec228c42)<br/>
+**Home**: [Lesson 5 main page](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing)<br/>
+**Previous**: [Reading multiple data files](reading-multiple-files.md)
