@@ -97,3 +97,7 @@ Just a suggestion here.
 You should take a look at the values in your data files before you upload them to make sure the values look reasonable.
 The temperature values are in Fahrenheit.
 Feel free to convert them to Celsius, but make a note that the temperatures are in Celsius when you commit the files.
+
+## 
+**Home**: [Lesson 5 main page](https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing)<br/>
+**Previous**: [Exercise 5: Analysing NOAA climate data](https://classroom.github.com/assignment-invitations/17f0f2ee87873cb1bcb2c6a9ec228c42)
